@@ -2,37 +2,13 @@
 
 namespace Electro\MaintenanceMode;
 
-use pocketmine\event\Event;
-use pocketmine\event\player\PlayerKickEvent;
-use pocketmine\item\Arrow;
-use pocketmine\item\enchantment\Enchantment;
-use pocketmine\item\ItemFactory;
-use pocketmine\level\Position;
-use pocketmine\Server;
-use pocketmine\Player;
-
+use pocketmine\event\player\PlayerLoginEvent;
+use pocketmine\event\player\PlayerPreLoginEvent;
 use pocketmine\plugin\PluginBase;
-use pocketmine\plugin\Plugin;
-use pocketmine\plugin\PluginLoader;
-
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
-
 use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerJoinEvent;
-
-use pocketmine\utils\TextFormat;
-
-use pocketmine\item\Item;
-
-use pocketmine\entity\Entity;
-use pocketmine\entity\NPC;
-use pocketmine\entity\Human;
-use pocketmine\entity\Skin;
-use pocketmine\entity\Zombie;
-use pocketmine\event\entity\EntitySpawnEvent;
-use pocketmine\utils\Config;
-
 class Main extends PluginBase implements Listener{
 
     public function onEnable()
@@ -46,7 +22,7 @@ class Main extends PluginBase implements Listener{
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
     }
 
-    public function onJoin(PlayerJoinEvent $event){
+    public function onJoin(PlayerPreLoginEvent $event){
         $player = $event->getPlayer();
 
         if ($this->getConfig()->get("Maintenance_Mode_Active") === true && !$player->hasPermission("mm.bypass")){
