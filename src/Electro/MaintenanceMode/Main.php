@@ -49,7 +49,7 @@ class Main extends PluginBase implements Listener{
     public function onJoin(PlayerJoinEvent $event){
         $player = $event->getPlayer();
 
-        if ($this->getConfig()->get("Maintenance_Mode_Active") === true && !$player->hasPermission("mm_bypass")){
+        if ($this->getConfig()->get("Maintenance_Mode_Active") === true && !$player->hasPermission("mm.bypass")){
             $player->kick($this->getConfig()->get("Maintenance_Mode_Message"), false);
         }
     }
