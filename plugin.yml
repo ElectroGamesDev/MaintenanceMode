@@ -1,0 +1,15 @@
+main : Electro\MaintenanceMode\Main
+name: MaintenanceMode
+version: 1.0.0
+api: 3.0.0
+author: Electro
+description: Adds Maintenance Mode To Your Server
+
+commands:
+  mm:
+    description: Turn on/off Maintenance Mode
+    default: op
+    
+permissions:
+  mm.cmd:
+    default: op
