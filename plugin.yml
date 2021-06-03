@@ -1,6 +1,6 @@
 main : Electro\MaintenanceMode\Main
 name: MaintenanceMode
-version: 1.0.0
+version: 1.0.1
 api: 3.0.0
 author: Electro
 description: Adds Maintenance Mode To Your Server
@@ -12,4 +12,6 @@ commands:
     
 permissions:
   mm.cmd:
+    default: op
+  mm.bypass:
     default: op
