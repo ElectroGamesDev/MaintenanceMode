@@ -4,6 +4,6 @@
 - /mm on
 - /mm off
 # Permissions
-- Permission: mm_bypass
+- Permission: mm.bypass
 # Credits
 - Icon made by Freepik from www.flaticon.com
