@@ -9,16 +9,11 @@ use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerJoinEvent;
+
 class Main extends PluginBase implements Listener{
 
     public function onEnable()
     {
-        if(!is_dir($this->getDataFolder())) {
-            mkdir($this->getDataFolder());
-        }
-        $this->saveDefaultConfig();
-        $this->getResource("config.yml");
-
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
     }
 
