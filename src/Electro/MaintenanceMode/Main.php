@@ -2,14 +2,13 @@
 
 namespace Electro\MaintenanceMode;
 
+use pocketmine\event\player\PlayerLoginEvent;
 use pocketmine\event\player\PlayerPreLoginEvent;
-
+use pocketmine\plugin\PluginBase;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
-
 use pocketmine\event\Listener;
-use pocketmine\plugin\PluginBase;
-
+use pocketmine\event\player\PlayerJoinEvent;
 class Main extends PluginBase implements Listener{
 
     public function onEnable()
@@ -20,13 +19,13 @@ class Main extends PluginBase implements Listener{
     public function onJoin(PlayerPreLoginEvent $event){
         $player = $event->getPlayer();
 
-        if ($this->getConfig()->get("Maintenance_Mode_Active") === true && !$player->hasPermission("mm.bypass")){
+        if ($this->getConfig()->get("Maintenance_Mode_Active") === true && !$player->hasPermission("maintenancemode.bypass")){
             $player->kick($this->getConfig()->get("Maintenance_Mode_Message"), false);
         }
     }
 
     public function onCommand(CommandSender $sender, Command $command, string $label, array $args): bool{
-        if (!$sender->hasPermission("mm.cmd")){
+        if (!$sender->hasPermission("maintenancemode.cmd")){
             $sender->sendMessage("§cYou don't have permissions to use this command");
             return true;
         }
