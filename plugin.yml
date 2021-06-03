@@ -11,7 +11,7 @@ commands:
     default: op
     
 permissions:
-  mm.cmd:
+  maintenancemode.cmd:
     default: op
-  mm.bypass:
+  maintenancemode.bypass:
     default: op
