@@ -1,18 +1,17 @@
-main : Electro\MaintenanceMode\Main
-name: MaintenanceMode
-version: 1.0.2
+main : Electro\RemoteConsole\RemoteConsole
+name: RemoteConsole
+version: 2.0.0
 api: 4.0.0
-author: Electro
-description: Adds Maintenance Mode To Your Server
+Author: Electro
 
 commands:
-  mm:
-    description: Turn on/off Maintenance Mode
-    default: op
-    permission: maintenancemode.cmd
-    
+  console:
+    description: Send commands through console
+    default: true
+    permission: remoteconsole.cmd
+
 permissions:
-  maintenancemode.cmd:
-    default: op
-  maintenancemode.bypass:
+  remoteconsole.cmd:
+    default: true
+  remoteconsole.password.bypass:
     default: op
