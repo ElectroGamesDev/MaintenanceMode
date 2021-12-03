@@ -9,6 +9,7 @@ commands:
   mm:
     description: Turn on/off Maintenance Mode
     default: op
+    permission: maintenancemode.cmd
     
 permissions:
   maintenancemode.cmd:
