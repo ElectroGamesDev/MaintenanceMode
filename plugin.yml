@@ -7,7 +7,6 @@ Author: Electro
 commands:
   console:
     description: Send commands through console
-    default: true
     permission: remoteconsole.cmd
 
 permissions:
