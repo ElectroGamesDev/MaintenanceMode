@@ -1,17 +1,16 @@
-main : Electro\RemoteConsole\RemoteConsole
-name: RemoteConsole
+main : Electro\MaintenanceMode\Main
+name: MaintenanceMode
 version: 2.0.0
 api: 4.0.0
 Author: Electro
 
 commands:
-  console:
-    description: Send commands through console
-    permission: remoteconsole.cmd
+  mm:
+    description: Activate/Disable Maintenance Mode
+    permission: maintenancemode.cmd
 
 permissions:
-  remoteconsole.cmd:
-    default: true
-  remoteconsole.password.bypass:
+  maintenancemode.bypass:
     default: op
-
+  maintenancemode.cmd:
+    default: op
