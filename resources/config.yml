@@ -2,5 +2,7 @@
 
 # If set to "true", Maintenance Mode Will Be Active
 Maintenance_Mode_Active: false
+# Change everything inside of the "" below set your Motd when Maintenance Mode is on.
+Maintenance_Motd: "§l§aCubicPE: §l§cMaintenance"
 # Change everything inside of the "" below to set your own message (Make sure to leave the "")
 Maintenance_Mode_Message: "§l§aCubicPE is Currently Down For Maintenance"
