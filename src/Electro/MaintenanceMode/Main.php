@@ -18,7 +18,7 @@ class Main extends PluginBase implements Listener{
         $player = $event->getPlayer();
 
         if ($this->getConfig()->get("Maintenance_Mode_Active") === true && !$player->hasPermission("maintenancemode.bypass")){
-            $player->kick($this->getConfig()->get("Maintenance_Mode_Message"), true);
+            $player->kick($this->getConfig()->get("Maintenance_Mode_Message"), false, true);
         }
     }
 
