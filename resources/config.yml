@@ -1,6 +1,4 @@
-# This Plugin Was Coded By ElectrozGames#4050
-
 # If set to "true", Maintenance Mode Will Be Active
 Maintenance_Mode_Active: false
-# Change everything inside of the "" below to set your own message (Make sure to leave the "")
-Maintenance_Mode_Message: "§l§aCubicPE is Currently Down For Maintenance"
+# Change everything inside of the "" below to set your own message
+Maintenance_Mode_Message: "§l§aThis server is Currently Down For Maintenance"
